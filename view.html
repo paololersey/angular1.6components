@@ -1,0 +1,16 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Example - 2 components communication through $event</title>
+    <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
+    <script src="LanguageCountriesModuleApp.js"></script>
+
+    <script src="LanguageInputController.js"></script>
+    <script src="LanguageInputComponent.js"></script>
+    <script src="CountryController.js"></script>
+    <script src="CountryComponent.js"></script>
+</head>
+
+<div ng-app="languageCountrieModule">
+    <language-input set-countries="countriesChosen = $event.countries"> </language-input>
+    <country-list title="Country list" countries="countriesChosen.existingCountries" number="countriesChosen.number"> </country-list>
+</div>
